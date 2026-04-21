@@ -1,6 +1,6 @@
 ﻿namespace proiect_arhitectura_sistemelor_de_calcul
 {
-    partial class Form1
+    partial class CPUViewerForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // CPUViewerForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Name = "CPUViewerForm";
+            Text = "CPUViewer";
+            ResumeLayout(false);
         }
 
         #endregion
