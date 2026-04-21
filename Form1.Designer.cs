@@ -32,13 +32,14 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             openFileDialog = new OpenFileDialog();
+            runToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip
             // 
             menuStrip.ImageScalingSize = new Size(20, 20);
-            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, runToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(800, 28);
@@ -64,6 +65,13 @@
             openFileDialog.FileName = "openFileDialog1";
             openFileDialog.Filter = "|*.asm";
             // 
+            // runToolStripMenuItem
+            // 
+            runToolStripMenuItem.Name = "runToolStripMenuItem";
+            runToolStripMenuItem.Size = new Size(48, 24);
+            runToolStripMenuItem.Text = "Run";
+            runToolStripMenuItem.Click += runToolStripMenuItem_Click;
+            // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -85,5 +93,6 @@
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private OpenFileDialog openFileDialog;
+        private ToolStripMenuItem runToolStripMenuItem;
     }
 }
