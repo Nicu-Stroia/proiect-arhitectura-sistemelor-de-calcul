@@ -62,6 +62,7 @@
             // openFileDialog
             // 
             openFileDialog.FileName = "openFileDialog1";
+            openFileDialog.Filter = "|*.asm";
             // 
             // CPUViewerForm
             // 
