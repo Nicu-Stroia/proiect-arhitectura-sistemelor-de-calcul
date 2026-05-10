@@ -11,8 +11,8 @@ namespace proiect_arhitectura_sistemelor_de_calcul
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var parsed = ASMParser.Parse(openFileDialog.FileName);
-                if (parsed.Count != 0)
+                parsedLines = ASMParser.Parse(openFileDialog.FileName);
+                if (parsedLines.Count != 0)
                     MessageBox.Show(
                         "Parsed successfully",
                         "Parse status",
@@ -27,13 +27,22 @@ namespace proiect_arhitectura_sistemelor_de_calcul
                         MessageBoxIcon.Error
                         );
 
-                parsedTextBox.Lines = parsed.ToArray();
+                parsedTextBox.Lines = parsedLines.ToArray();
             }
         }
 
-        private void runToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stepToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //check if the file is loaded and update the registers
+            if (parsedLines == null || parsedLines.Count == 0)
+            {
+                MessageBox.Show(
+                         "Parsed content does not exist",
+                         "Step status",
+                         MessageBoxButtons.OK,
+                         MessageBoxIcon.Error
+                         );
+                return;
+            }
         }
     }
 }
