@@ -109,6 +109,18 @@
             sbusLabel = new Label();
             dbusLabel = new Label();
             sbusValue = new TextBox();
+            aluGroup = new GroupBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            outputRValue = new TextBox();
+            outputRLabel = new Label();
+            operationValue = new TextBox();
+            operationLabel = new Label();
+            inputDValue = new TextBox();
+            aluTableColumn1Label = new Label();
+            aluTableColumn0Label = new Label();
+            inputSLabel = new Label();
+            inputDLabel = new Label();
+            inputSValue = new TextBox();
             menuStrip.SuspendLayout();
             generalRegistersGroup.SuspendLayout();
             generalRegistersTableLayout.SuspendLayout();
@@ -120,6 +132,8 @@
             auxiliaryRegistersTableLayout.SuspendLayout();
             busGroup.SuspendLayout();
             busTableLayout.SuspendLayout();
+            aluGroup.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip
@@ -681,7 +695,7 @@
             // memoryInterfaceRegistersGroup
             // 
             memoryInterfaceRegistersGroup.Controls.Add(memoryInterfaceRegistersTableLayout);
-            memoryInterfaceRegistersGroup.Location = new Point(532, 44);
+            memoryInterfaceRegistersGroup.Location = new Point(799, 44);
             memoryInterfaceRegistersGroup.Name = "memoryInterfaceRegistersGroup";
             memoryInterfaceRegistersGroup.Size = new Size(232, 175);
             memoryInterfaceRegistersGroup.TabIndex = 3;
@@ -768,7 +782,7 @@
             // auxiliaryRegistersGroup
             // 
             auxiliaryRegistersGroup.Controls.Add(auxiliaryRegistersTableLayout);
-            auxiliaryRegistersGroup.Location = new Point(532, 225);
+            auxiliaryRegistersGroup.Location = new Point(799, 225);
             auxiliaryRegistersGroup.Name = "auxiliaryRegistersGroup";
             auxiliaryRegistersGroup.Size = new Size(232, 145);
             auxiliaryRegistersGroup.TabIndex = 4;
@@ -958,11 +972,139 @@
             sbusValue.TabIndex = 20;
             sbusValue.Text = "0x0";
             // 
+            // aluGroup
+            // 
+            aluGroup.Controls.Add(tableLayoutPanel1);
+            aluGroup.Location = new Point(534, 44);
+            aluGroup.Name = "aluGroup";
+            aluGroup.Size = new Size(229, 326);
+            aluGroup.TabIndex = 6;
+            aluGroup.TabStop = false;
+            aluGroup.Text = "ALU";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 39.4618835F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60.5381165F));
+            tableLayoutPanel1.Controls.Add(outputRValue, 1, 4);
+            tableLayoutPanel1.Controls.Add(outputRLabel, 0, 4);
+            tableLayoutPanel1.Controls.Add(operationValue, 1, 3);
+            tableLayoutPanel1.Controls.Add(operationLabel, 0, 3);
+            tableLayoutPanel1.Controls.Add(inputDValue, 1, 2);
+            tableLayoutPanel1.Controls.Add(aluTableColumn1Label, 1, 0);
+            tableLayoutPanel1.Controls.Add(aluTableColumn0Label, 0, 0);
+            tableLayoutPanel1.Controls.Add(inputSLabel, 0, 1);
+            tableLayoutPanel1.Controls.Add(inputDLabel, 0, 2);
+            tableLayoutPanel1.Controls.Add(inputSValue, 1, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(3, 23);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 5;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.Size = new Size(223, 300);
+            tableLayoutPanel1.TabIndex = 2;
+            // 
+            // outputRValue
+            // 
+            outputRValue.Location = new Point(91, 243);
+            outputRValue.Name = "outputRValue";
+            outputRValue.ReadOnly = true;
+            outputRValue.Size = new Size(50, 27);
+            outputRValue.TabIndex = 26;
+            outputRValue.Text = "0x0";
+            // 
+            // outputRLabel
+            // 
+            outputRLabel.AutoSize = true;
+            outputRLabel.Location = new Point(3, 240);
+            outputRLabel.Name = "outputRLabel";
+            outputRLabel.Size = new Size(68, 20);
+            outputRLabel.TabIndex = 25;
+            outputRLabel.Text = "Output R";
+            // 
+            // operationValue
+            // 
+            operationValue.Location = new Point(91, 183);
+            operationValue.Name = "operationValue";
+            operationValue.ReadOnly = true;
+            operationValue.Size = new Size(50, 27);
+            operationValue.TabIndex = 24;
+            operationValue.Text = "NaN";
+            // 
+            // operationLabel
+            // 
+            operationLabel.AutoSize = true;
+            operationLabel.Location = new Point(3, 180);
+            operationLabel.Name = "operationLabel";
+            operationLabel.Size = new Size(76, 20);
+            operationLabel.TabIndex = 23;
+            operationLabel.Text = "Operation";
+            // 
+            // inputDValue
+            // 
+            inputDValue.Location = new Point(91, 123);
+            inputDValue.Name = "inputDValue";
+            inputDValue.ReadOnly = true;
+            inputDValue.Size = new Size(50, 27);
+            inputDValue.TabIndex = 22;
+            inputDValue.Text = "0x0";
+            // 
+            // aluTableColumn1Label
+            // 
+            aluTableColumn1Label.AutoSize = true;
+            aluTableColumn1Label.Location = new Point(91, 0);
+            aluTableColumn1Label.Name = "aluTableColumn1Label";
+            aluTableColumn1Label.Size = new Size(45, 20);
+            aluTableColumn1Label.TabIndex = 4;
+            aluTableColumn1Label.Text = "Value";
+            // 
+            // aluTableColumn0Label
+            // 
+            aluTableColumn0Label.AutoSize = true;
+            aluTableColumn0Label.Location = new Point(3, 0);
+            aluTableColumn0Label.Name = "aluTableColumn0Label";
+            aluTableColumn0Label.Size = new Size(49, 20);
+            aluTableColumn0Label.TabIndex = 2;
+            aluTableColumn0Label.Text = "Name";
+            // 
+            // inputSLabel
+            // 
+            inputSLabel.AutoSize = true;
+            inputSLabel.Location = new Point(3, 60);
+            inputSLabel.Name = "inputSLabel";
+            inputSLabel.Size = new Size(55, 20);
+            inputSLabel.TabIndex = 0;
+            inputSLabel.Text = "Input S";
+            // 
+            // inputDLabel
+            // 
+            inputDLabel.AutoSize = true;
+            inputDLabel.Location = new Point(3, 120);
+            inputDLabel.Name = "inputDLabel";
+            inputDLabel.Size = new Size(58, 20);
+            inputDLabel.TabIndex = 6;
+            inputDLabel.Text = "Input D";
+            // 
+            // inputSValue
+            // 
+            inputSValue.Location = new Point(91, 63);
+            inputSValue.Name = "inputSValue";
+            inputSValue.ReadOnly = true;
+            inputSValue.Size = new Size(50, 27);
+            inputSValue.TabIndex = 20;
+            inputSValue.Text = "0x0";
+            // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 606);
+            Controls.Add(aluGroup);
             Controls.Add(busGroup);
             Controls.Add(auxiliaryRegistersGroup);
             Controls.Add(memoryInterfaceRegistersGroup);
@@ -989,6 +1131,9 @@
             busGroup.ResumeLayout(false);
             busTableLayout.ResumeLayout(false);
             busTableLayout.PerformLayout();
+            aluGroup.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1076,5 +1221,17 @@
         private TextBox sbusValue;
         private TextBox rbusValue;
         private Label rbusLabel;
+        private GroupBox aluGroup;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TextBox operationValue;
+        private Label operationLabel;
+        private TextBox inputDValue;
+        private Label aluTableColumn1Label;
+        private Label aluTableColumn0Label;
+        private Label inputSLabel;
+        private Label inputDLabel;
+        private TextBox inputSValue;
+        private Label outputRLabel;
+        private TextBox outputRValue;
     }
 }
