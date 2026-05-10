@@ -31,9 +31,18 @@ namespace proiect_arhitectura_sistemelor_de_calcul
             }
         }
 
-        private void runToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stepToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //check if the file is loaded and update the registers
+            if (parsedLines == null || parsedLines.Count == 0)
+            {
+                MessageBox.Show(
+                         "Parsed content does not exist",
+                         "Step status",
+                         MessageBoxButtons.OK,
+                         MessageBoxIcon.Error
+                         );
+                return;
+            }
         }
     }
 }

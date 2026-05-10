@@ -31,7 +31,7 @@
             menuStrip = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
-            runToolStripMenuItem = new ToolStripMenuItem();
+            stepToolStripMenuItem = new ToolStripMenuItem();
             openFileDialog = new OpenFileDialog();
             generalRegistersGroup = new GroupBox();
             generalRegistersTableLayout = new TableLayoutPanel();
@@ -141,7 +141,7 @@
             // menuStrip
             // 
             menuStrip.ImageScalingSize = new Size(20, 20);
-            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, runToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, stepToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(1241, 28);
@@ -162,12 +162,12 @@
             openToolStripMenuItem.Text = "Open...";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
-            // runToolStripMenuItem
+            // stepToolStripMenuItem
             // 
-            runToolStripMenuItem.Name = "runToolStripMenuItem";
-            runToolStripMenuItem.Size = new Size(48, 24);
-            runToolStripMenuItem.Text = "Run";
-            runToolStripMenuItem.Click += runToolStripMenuItem_Click;
+            stepToolStripMenuItem.Name = "stepToolStripMenuItem";
+            stepToolStripMenuItem.Size = new Size(53, 24);
+            stepToolStripMenuItem.Text = "Step";
+            stepToolStripMenuItem.Click += stepToolStripMenuItem_Click;
             // 
             // openFileDialog
             // 
@@ -1172,7 +1172,7 @@
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private OpenFileDialog openFileDialog;
-        private ToolStripMenuItem runToolStripMenuItem;
+        private ToolStripMenuItem stepToolStripMenuItem;
         private GroupBox generalRegistersGroup;
         private TableLayoutPanel generalRegistersTableLayout;
         private Label r1Label;
