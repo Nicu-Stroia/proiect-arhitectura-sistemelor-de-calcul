@@ -71,7 +71,7 @@
             r14Label = new Label();
             r15Label = new Label();
             r0Value = new TextBox();
-            controlAndStatusregistersGroup = new GroupBox();
+            controlAndStatusRegistersGroup = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             spValue = new TextBox();
             flagValue = new TextBox();
@@ -83,11 +83,21 @@
             flagLabel = new Label();
             spLabel = new Label();
             pcValue = new TextBox();
+            memoryInterfaceRegistersGroup = new GroupBox();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            mdrValue = new TextBox();
+            memoryInterfaceRegistersTableColumn1Label = new Label();
+            memoryInterfaceRegistersTableColumn0Label = new Label();
+            adrLabel = new Label();
+            mdrLabel = new Label();
+            adrValue = new TextBox();
             menuStrip.SuspendLayout();
             generalRegistersGroup.SuspendLayout();
             registersTableLayoutPanel.SuspendLayout();
-            controlAndStatusregistersGroup.SuspendLayout();
+            controlAndStatusRegistersGroup.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            memoryInterfaceRegistersGroup.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip
@@ -134,7 +144,7 @@
             generalRegistersGroup.Size = new Size(232, 326);
             generalRegistersGroup.TabIndex = 1;
             generalRegistersGroup.TabStop = false;
-            generalRegistersGroup.Text = "General Registers";
+            generalRegistersGroup.Text = "General";
             // 
             // registersTableLayoutPanel
             // 
@@ -519,15 +529,15 @@
             r0Value.TabIndex = 20;
             r0Value.Text = "0x0";
             // 
-            // controlAndStatusregistersGroup
+            // controlAndStatusRegistersGroup
             // 
-            controlAndStatusregistersGroup.Controls.Add(tableLayoutPanel1);
-            controlAndStatusregistersGroup.Location = new Point(335, 44);
-            controlAndStatusregistersGroup.Name = "controlAndStatusregistersGroup";
-            controlAndStatusregistersGroup.Size = new Size(232, 326);
-            controlAndStatusregistersGroup.TabIndex = 2;
-            controlAndStatusregistersGroup.TabStop = false;
-            controlAndStatusregistersGroup.Text = "Constorl and Status";
+            controlAndStatusRegistersGroup.Controls.Add(tableLayoutPanel1);
+            controlAndStatusRegistersGroup.Location = new Point(335, 44);
+            controlAndStatusRegistersGroup.Name = "controlAndStatusRegistersGroup";
+            controlAndStatusRegistersGroup.Size = new Size(232, 326);
+            controlAndStatusRegistersGroup.TabIndex = 2;
+            controlAndStatusRegistersGroup.TabStop = false;
+            controlAndStatusRegistersGroup.Text = "Control and Status";
             // 
             // tableLayoutPanel1
             // 
@@ -650,12 +660,100 @@
             pcValue.TabIndex = 20;
             pcValue.Text = "0x0";
             // 
+            // memoryInterfaceRegistersGroup
+            // 
+            memoryInterfaceRegistersGroup.Controls.Add(tableLayoutPanel2);
+            memoryInterfaceRegistersGroup.Location = new Point(650, 44);
+            memoryInterfaceRegistersGroup.Name = "memoryInterfaceRegistersGroup";
+            memoryInterfaceRegistersGroup.Size = new Size(232, 326);
+            memoryInterfaceRegistersGroup.TabIndex = 3;
+            memoryInterfaceRegistersGroup.TabStop = false;
+            memoryInterfaceRegistersGroup.Text = "Memory Interface";
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(mdrValue, 1, 2);
+            tableLayoutPanel2.Controls.Add(memoryInterfaceRegistersTableColumn1Label, 1, 0);
+            tableLayoutPanel2.Controls.Add(memoryInterfaceRegistersTableColumn0Label, 0, 0);
+            tableLayoutPanel2.Controls.Add(adrLabel, 0, 1);
+            tableLayoutPanel2.Controls.Add(mdrLabel, 0, 2);
+            tableLayoutPanel2.Controls.Add(adrValue, 1, 1);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(3, 23);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 3;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(226, 300);
+            tableLayoutPanel2.TabIndex = 2;
+            // 
+            // mdrValue
+            // 
+            mdrValue.Location = new Point(116, 203);
+            mdrValue.Name = "mdrValue";
+            mdrValue.ReadOnly = true;
+            mdrValue.Size = new Size(50, 27);
+            mdrValue.TabIndex = 22;
+            mdrValue.Text = "0x0";
+            // 
+            // memoryInterfaceRegistersTableColumn1Label
+            // 
+            memoryInterfaceRegistersTableColumn1Label.AutoSize = true;
+            memoryInterfaceRegistersTableColumn1Label.Location = new Point(116, 0);
+            memoryInterfaceRegistersTableColumn1Label.Name = "memoryInterfaceRegistersTableColumn1Label";
+            memoryInterfaceRegistersTableColumn1Label.Size = new Size(45, 20);
+            memoryInterfaceRegistersTableColumn1Label.TabIndex = 4;
+            memoryInterfaceRegistersTableColumn1Label.Text = "Value";
+            // 
+            // memoryInterfaceRegistersTableColumn0Label
+            // 
+            memoryInterfaceRegistersTableColumn0Label.AutoSize = true;
+            memoryInterfaceRegistersTableColumn0Label.Location = new Point(3, 0);
+            memoryInterfaceRegistersTableColumn0Label.Name = "memoryInterfaceRegistersTableColumn0Label";
+            memoryInterfaceRegistersTableColumn0Label.Size = new Size(49, 20);
+            memoryInterfaceRegistersTableColumn0Label.TabIndex = 2;
+            memoryInterfaceRegistersTableColumn0Label.Text = "Name";
+            // 
+            // adrLabel
+            // 
+            adrLabel.AutoSize = true;
+            adrLabel.Location = new Point(3, 100);
+            adrLabel.Name = "adrLabel";
+            adrLabel.Size = new Size(39, 20);
+            adrLabel.TabIndex = 0;
+            adrLabel.Text = "ADR";
+            // 
+            // mdrLabel
+            // 
+            mdrLabel.AutoSize = true;
+            mdrLabel.Location = new Point(3, 200);
+            mdrLabel.Name = "mdrLabel";
+            mdrLabel.Size = new Size(42, 20);
+            mdrLabel.TabIndex = 6;
+            mdrLabel.Text = "MDR";
+            // 
+            // adrValue
+            // 
+            adrValue.Location = new Point(116, 103);
+            adrValue.Name = "adrValue";
+            adrValue.ReadOnly = true;
+            adrValue.Size = new Size(50, 27);
+            adrValue.TabIndex = 20;
+            adrValue.Text = "0x0";
+            // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 606);
-            Controls.Add(controlAndStatusregistersGroup);
+            Controls.Add(memoryInterfaceRegistersGroup);
+            Controls.Add(controlAndStatusRegistersGroup);
             Controls.Add(generalRegistersGroup);
             Controls.Add(menuStrip);
             MainMenuStrip = menuStrip;
@@ -666,9 +764,12 @@
             generalRegistersGroup.ResumeLayout(false);
             registersTableLayoutPanel.ResumeLayout(false);
             registersTableLayoutPanel.PerformLayout();
-            controlAndStatusregistersGroup.ResumeLayout(false);
+            controlAndStatusRegistersGroup.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            memoryInterfaceRegistersGroup.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -718,7 +819,7 @@
         private TextBox r3Value;
         private TextBox r2Value;
         private TextBox r1Value;
-        private GroupBox controlAndStatusregistersGroup;
+        private GroupBox controlAndStatusRegistersGroup;
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox spValue;
         private TextBox flagValue;
@@ -730,5 +831,13 @@
         private Label flagLabel;
         private Label spLabel;
         private TextBox pcValue;
+        private GroupBox memoryInterfaceRegistersGroup;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TextBox mdrValue;
+        private Label memoryInterfaceRegistersTableColumn1Label;
+        private Label memoryInterfaceRegistersTableColumn0Label;
+        private Label adrLabel;
+        private Label mdrLabel;
+        private TextBox adrValue;
     }
 }
