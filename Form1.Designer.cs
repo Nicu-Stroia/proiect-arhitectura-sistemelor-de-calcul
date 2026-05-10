@@ -1164,7 +1164,9 @@
 
         #region Custom Variables
 
-        List<String> parsedLines;
+        private List<String> parsedLines;
+
+        private InstructionLoader instructionLoader = new InstructionLoader();
 
         #endregion
 
