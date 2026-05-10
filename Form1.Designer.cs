@@ -1162,9 +1162,9 @@
 
         #endregion
 
-        #region Custom Classes
+        #region Custom Variables
 
-
+        List<String> parsedLines;
 
         #endregion
 
