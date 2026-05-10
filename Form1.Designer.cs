@@ -91,6 +91,14 @@
             adrLabel = new Label();
             mdrLabel = new Label();
             adrValue = new TextBox();
+            auxiliaryRegistersGroupBox = new GroupBox();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            ivrValue = new TextBox();
+            auxiliaryRegistersTableColumn1Label = new Label();
+            auxiliaryRegistersTableColumn0Label = new Label();
+            tLabel = new Label();
+            ivrLabel = new Label();
+            tValue = new TextBox();
             menuStrip.SuspendLayout();
             generalRegistersGroup.SuspendLayout();
             registersTableLayoutPanel.SuspendLayout();
@@ -98,6 +106,8 @@
             tableLayoutPanel1.SuspendLayout();
             memoryInterfaceRegistersGroup.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            auxiliaryRegistersGroupBox.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip
@@ -532,7 +542,7 @@
             // controlAndStatusRegistersGroup
             // 
             controlAndStatusRegistersGroup.Controls.Add(tableLayoutPanel1);
-            controlAndStatusRegistersGroup.Location = new Point(335, 44);
+            controlAndStatusRegistersGroup.Location = new Point(265, 44);
             controlAndStatusRegistersGroup.Name = "controlAndStatusRegistersGroup";
             controlAndStatusRegistersGroup.Size = new Size(232, 326);
             controlAndStatusRegistersGroup.TabIndex = 2;
@@ -663,7 +673,7 @@
             // memoryInterfaceRegistersGroup
             // 
             memoryInterfaceRegistersGroup.Controls.Add(tableLayoutPanel2);
-            memoryInterfaceRegistersGroup.Location = new Point(650, 44);
+            memoryInterfaceRegistersGroup.Location = new Point(532, 44);
             memoryInterfaceRegistersGroup.Name = "memoryInterfaceRegistersGroup";
             memoryInterfaceRegistersGroup.Size = new Size(232, 326);
             memoryInterfaceRegistersGroup.TabIndex = 3;
@@ -747,11 +757,99 @@
             adrValue.TabIndex = 20;
             adrValue.Text = "0x0";
             // 
+            // auxiliaryRegistersGroupBox
+            // 
+            auxiliaryRegistersGroupBox.Controls.Add(tableLayoutPanel3);
+            auxiliaryRegistersGroupBox.Location = new Point(803, 44);
+            auxiliaryRegistersGroupBox.Name = "auxiliaryRegistersGroupBox";
+            auxiliaryRegistersGroupBox.Size = new Size(232, 326);
+            auxiliaryRegistersGroupBox.TabIndex = 4;
+            auxiliaryRegistersGroupBox.TabStop = false;
+            auxiliaryRegistersGroupBox.Text = "Auxiliary";
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(ivrValue, 1, 2);
+            tableLayoutPanel3.Controls.Add(auxiliaryRegistersTableColumn1Label, 1, 0);
+            tableLayoutPanel3.Controls.Add(auxiliaryRegistersTableColumn0Label, 0, 0);
+            tableLayoutPanel3.Controls.Add(tLabel, 0, 1);
+            tableLayoutPanel3.Controls.Add(ivrLabel, 0, 2);
+            tableLayoutPanel3.Controls.Add(tValue, 1, 1);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(3, 23);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 3;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(226, 300);
+            tableLayoutPanel3.TabIndex = 2;
+            // 
+            // ivrValue
+            // 
+            ivrValue.Location = new Point(116, 203);
+            ivrValue.Name = "ivrValue";
+            ivrValue.ReadOnly = true;
+            ivrValue.Size = new Size(50, 27);
+            ivrValue.TabIndex = 22;
+            ivrValue.Text = "0x0";
+            // 
+            // auxiliaryRegistersTableColumn1Label
+            // 
+            auxiliaryRegistersTableColumn1Label.AutoSize = true;
+            auxiliaryRegistersTableColumn1Label.Location = new Point(116, 0);
+            auxiliaryRegistersTableColumn1Label.Name = "auxiliaryRegistersTableColumn1Label";
+            auxiliaryRegistersTableColumn1Label.Size = new Size(45, 20);
+            auxiliaryRegistersTableColumn1Label.TabIndex = 4;
+            auxiliaryRegistersTableColumn1Label.Text = "Value";
+            // 
+            // auxiliaryRegistersTableColumn0Label
+            // 
+            auxiliaryRegistersTableColumn0Label.AutoSize = true;
+            auxiliaryRegistersTableColumn0Label.Location = new Point(3, 0);
+            auxiliaryRegistersTableColumn0Label.Name = "auxiliaryRegistersTableColumn0Label";
+            auxiliaryRegistersTableColumn0Label.Size = new Size(49, 20);
+            auxiliaryRegistersTableColumn0Label.TabIndex = 2;
+            auxiliaryRegistersTableColumn0Label.Text = "Name";
+            // 
+            // tLabel
+            // 
+            tLabel.AutoSize = true;
+            tLabel.Location = new Point(3, 100);
+            tLabel.Name = "tLabel";
+            tLabel.Size = new Size(17, 20);
+            tLabel.TabIndex = 0;
+            tLabel.Text = "T";
+            // 
+            // ivrLabel
+            // 
+            ivrLabel.AutoSize = true;
+            ivrLabel.Location = new Point(3, 200);
+            ivrLabel.Name = "ivrLabel";
+            ivrLabel.Size = new Size(42, 20);
+            ivrLabel.TabIndex = 6;
+            ivrLabel.Text = "MDR";
+            // 
+            // tValue
+            // 
+            tValue.Location = new Point(116, 103);
+            tValue.Name = "tValue";
+            tValue.ReadOnly = true;
+            tValue.Size = new Size(50, 27);
+            tValue.TabIndex = 20;
+            tValue.Text = "0x0";
+            // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 606);
+            Controls.Add(auxiliaryRegistersGroupBox);
             Controls.Add(memoryInterfaceRegistersGroup);
             Controls.Add(controlAndStatusRegistersGroup);
             Controls.Add(generalRegistersGroup);
@@ -770,6 +868,9 @@
             memoryInterfaceRegistersGroup.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
+            auxiliaryRegistersGroupBox.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -839,5 +940,13 @@
         private Label adrLabel;
         private Label mdrLabel;
         private TextBox adrValue;
+        private GroupBox auxiliaryRegistersGroupBox;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TextBox ivrValue;
+        private Label auxiliaryRegistersTableColumn1Label;
+        private Label auxiliaryRegistersTableColumn0Label;
+        private Label tLabel;
+        private Label ivrLabel;
+        private TextBox tValue;
     }
 }
