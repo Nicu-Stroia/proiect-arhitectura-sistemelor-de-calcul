@@ -5,6 +5,8 @@ namespace proiect_arhitectura_sistemelor_de_calcul
         public CPUViewerForm()
         {
             InitializeComponent();
+
+            instructionLoader.Load("InstructiuniProcesor.xlsx");
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
