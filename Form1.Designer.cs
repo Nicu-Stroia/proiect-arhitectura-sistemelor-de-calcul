@@ -33,13 +33,28 @@
             openToolStripMenuItem = new ToolStripMenuItem();
             runToolStripMenuItem = new ToolStripMenuItem();
             openFileDialog = new OpenFileDialog();
-            registersGroupBox = new GroupBox();
+            generalRegistersGroup = new GroupBox();
             registersTableLayoutPanel = new TableLayoutPanel();
-            registersTableColumn3Label = new Label();
-            registersTableColumn1Label = new Label();
-            registersTableColumn0Label = new Label();
+            r15Value = new TextBox();
+            r14Value = new TextBox();
+            r13Value = new TextBox();
+            r12Value = new TextBox();
+            r11Value = new TextBox();
+            r10Value = new TextBox();
+            r9Value = new TextBox();
+            r8Value = new TextBox();
+            r7Value = new TextBox();
+            r6Value = new TextBox();
+            r5Value = new TextBox();
+            r4Value = new TextBox();
+            r3Value = new TextBox();
+            r2Value = new TextBox();
+            r1Value = new TextBox();
+            generalRegistersTableColumn3Label = new Label();
+            generalRegistersTableColumn1Label = new Label();
+            generalRegistersTableColumn0Label = new Label();
             r1Label = new Label();
-            registersTableColumn2Label = new Label();
+            generalRegistersTableColumn2Label = new Label();
             r0Label = new Label();
             r2Label = new Label();
             r3Label = new Label();
@@ -56,24 +71,23 @@
             r14Label = new Label();
             r15Label = new Label();
             r0Value = new TextBox();
-            r1Value = new TextBox();
-            r2Value = new TextBox();
-            r3Value = new TextBox();
-            r4Value = new TextBox();
-            r5Value = new TextBox();
-            r6Value = new TextBox();
-            r7Value = new TextBox();
-            r8Value = new TextBox();
-            r9Value = new TextBox();
-            r10Value = new TextBox();
-            r11Value = new TextBox();
-            r12Value = new TextBox();
-            r13Value = new TextBox();
-            r14Value = new TextBox();
-            r15Value = new TextBox();
+            controlAndStatusregistersGroup = new GroupBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            spValue = new TextBox();
+            flagValue = new TextBox();
+            irValue = new TextBox();
+            controlAndStatusRegistersTableColumn1Label = new Label();
+            controlAndStatusRegistersTableColumn0Label = new Label();
+            pcLabel = new Label();
+            irLabel = new Label();
+            flagLabel = new Label();
+            spLabel = new Label();
+            pcValue = new TextBox();
             menuStrip.SuspendLayout();
-            registersGroupBox.SuspendLayout();
+            generalRegistersGroup.SuspendLayout();
             registersTableLayoutPanel.SuspendLayout();
+            controlAndStatusregistersGroup.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip
@@ -112,15 +126,15 @@
             openFileDialog.FileName = "openFileDialog1";
             openFileDialog.Filter = "|*.asm";
             // 
-            // registersGroupBox
+            // generalRegistersGroup
             // 
-            registersGroupBox.Controls.Add(registersTableLayoutPanel);
-            registersGroupBox.Location = new Point(12, 44);
-            registersGroupBox.Name = "registersGroupBox";
-            registersGroupBox.Size = new Size(232, 326);
-            registersGroupBox.TabIndex = 1;
-            registersGroupBox.TabStop = false;
-            registersGroupBox.Text = "General Registers";
+            generalRegistersGroup.Controls.Add(registersTableLayoutPanel);
+            generalRegistersGroup.Location = new Point(12, 44);
+            generalRegistersGroup.Name = "generalRegistersGroup";
+            generalRegistersGroup.Size = new Size(232, 326);
+            generalRegistersGroup.TabIndex = 1;
+            generalRegistersGroup.TabStop = false;
+            generalRegistersGroup.Text = "General Registers";
             // 
             // registersTableLayoutPanel
             // 
@@ -144,11 +158,11 @@
             registersTableLayoutPanel.Controls.Add(r3Value, 3, 2);
             registersTableLayoutPanel.Controls.Add(r2Value, 1, 2);
             registersTableLayoutPanel.Controls.Add(r1Value, 3, 1);
-            registersTableLayoutPanel.Controls.Add(registersTableColumn3Label, 3, 0);
-            registersTableLayoutPanel.Controls.Add(registersTableColumn1Label, 1, 0);
-            registersTableLayoutPanel.Controls.Add(registersTableColumn0Label, 0, 0);
+            registersTableLayoutPanel.Controls.Add(generalRegistersTableColumn3Label, 3, 0);
+            registersTableLayoutPanel.Controls.Add(generalRegistersTableColumn1Label, 1, 0);
+            registersTableLayoutPanel.Controls.Add(generalRegistersTableColumn0Label, 0, 0);
             registersTableLayoutPanel.Controls.Add(r1Label, 2, 1);
-            registersTableLayoutPanel.Controls.Add(registersTableColumn2Label, 2, 0);
+            registersTableLayoutPanel.Controls.Add(generalRegistersTableColumn2Label, 2, 0);
             registersTableLayoutPanel.Controls.Add(r0Label, 0, 1);
             registersTableLayoutPanel.Controls.Add(r2Label, 0, 2);
             registersTableLayoutPanel.Controls.Add(r3Label, 2, 2);
@@ -181,32 +195,167 @@
             registersTableLayoutPanel.Size = new Size(226, 300);
             registersTableLayoutPanel.TabIndex = 2;
             // 
-            // registersTableColumn3Label
+            // r15Value
             // 
-            registersTableColumn3Label.AutoSize = true;
-            registersTableColumn3Label.Location = new Point(171, 0);
-            registersTableColumn3Label.Name = "registersTableColumn3Label";
-            registersTableColumn3Label.Size = new Size(45, 20);
-            registersTableColumn3Label.TabIndex = 5;
-            registersTableColumn3Label.Text = "Value";
+            r15Value.Location = new Point(171, 267);
+            r15Value.Name = "r15Value";
+            r15Value.ReadOnly = true;
+            r15Value.Size = new Size(50, 27);
+            r15Value.TabIndex = 35;
+            r15Value.Text = "0x0";
             // 
-            // registersTableColumn1Label
+            // r14Value
             // 
-            registersTableColumn1Label.AutoSize = true;
-            registersTableColumn1Label.Location = new Point(59, 0);
-            registersTableColumn1Label.Name = "registersTableColumn1Label";
-            registersTableColumn1Label.Size = new Size(45, 20);
-            registersTableColumn1Label.TabIndex = 4;
-            registersTableColumn1Label.Text = "Value";
+            r14Value.Location = new Point(59, 267);
+            r14Value.Name = "r14Value";
+            r14Value.ReadOnly = true;
+            r14Value.Size = new Size(50, 27);
+            r14Value.TabIndex = 34;
+            r14Value.Text = "0x0";
             // 
-            // registersTableColumn0Label
+            // r13Value
             // 
-            registersTableColumn0Label.AutoSize = true;
-            registersTableColumn0Label.Location = new Point(3, 0);
-            registersTableColumn0Label.Name = "registersTableColumn0Label";
-            registersTableColumn0Label.Size = new Size(49, 20);
-            registersTableColumn0Label.TabIndex = 2;
-            registersTableColumn0Label.Text = "Name";
+            r13Value.Location = new Point(171, 234);
+            r13Value.Name = "r13Value";
+            r13Value.ReadOnly = true;
+            r13Value.Size = new Size(50, 27);
+            r13Value.TabIndex = 33;
+            r13Value.Text = "0x0";
+            // 
+            // r12Value
+            // 
+            r12Value.Location = new Point(59, 234);
+            r12Value.Name = "r12Value";
+            r12Value.ReadOnly = true;
+            r12Value.Size = new Size(50, 27);
+            r12Value.TabIndex = 32;
+            r12Value.Text = "0x0";
+            // 
+            // r11Value
+            // 
+            r11Value.Location = new Point(171, 201);
+            r11Value.Name = "r11Value";
+            r11Value.ReadOnly = true;
+            r11Value.Size = new Size(50, 27);
+            r11Value.TabIndex = 31;
+            r11Value.Text = "0x0";
+            // 
+            // r10Value
+            // 
+            r10Value.Location = new Point(59, 201);
+            r10Value.Name = "r10Value";
+            r10Value.ReadOnly = true;
+            r10Value.Size = new Size(50, 27);
+            r10Value.TabIndex = 30;
+            r10Value.Text = "0x0";
+            // 
+            // r9Value
+            // 
+            r9Value.Location = new Point(171, 168);
+            r9Value.Name = "r9Value";
+            r9Value.ReadOnly = true;
+            r9Value.Size = new Size(50, 27);
+            r9Value.TabIndex = 29;
+            r9Value.Text = "0x0";
+            // 
+            // r8Value
+            // 
+            r8Value.Location = new Point(59, 168);
+            r8Value.Name = "r8Value";
+            r8Value.ReadOnly = true;
+            r8Value.Size = new Size(50, 27);
+            r8Value.TabIndex = 28;
+            r8Value.Text = "0x0";
+            // 
+            // r7Value
+            // 
+            r7Value.Location = new Point(171, 135);
+            r7Value.Name = "r7Value";
+            r7Value.ReadOnly = true;
+            r7Value.Size = new Size(50, 27);
+            r7Value.TabIndex = 27;
+            r7Value.Text = "0x0";
+            // 
+            // r6Value
+            // 
+            r6Value.Location = new Point(59, 135);
+            r6Value.Name = "r6Value";
+            r6Value.ReadOnly = true;
+            r6Value.Size = new Size(50, 27);
+            r6Value.TabIndex = 26;
+            r6Value.Text = "0x0";
+            // 
+            // r5Value
+            // 
+            r5Value.Location = new Point(171, 102);
+            r5Value.Name = "r5Value";
+            r5Value.ReadOnly = true;
+            r5Value.Size = new Size(50, 27);
+            r5Value.TabIndex = 25;
+            r5Value.Text = "0x0";
+            // 
+            // r4Value
+            // 
+            r4Value.Location = new Point(59, 102);
+            r4Value.Name = "r4Value";
+            r4Value.ReadOnly = true;
+            r4Value.Size = new Size(50, 27);
+            r4Value.TabIndex = 24;
+            r4Value.Text = "0x0";
+            // 
+            // r3Value
+            // 
+            r3Value.Location = new Point(171, 69);
+            r3Value.Name = "r3Value";
+            r3Value.ReadOnly = true;
+            r3Value.Size = new Size(50, 27);
+            r3Value.TabIndex = 23;
+            r3Value.Text = "0x0";
+            // 
+            // r2Value
+            // 
+            r2Value.Location = new Point(59, 69);
+            r2Value.Name = "r2Value";
+            r2Value.ReadOnly = true;
+            r2Value.Size = new Size(50, 27);
+            r2Value.TabIndex = 22;
+            r2Value.Text = "0x0";
+            // 
+            // r1Value
+            // 
+            r1Value.Location = new Point(171, 36);
+            r1Value.Name = "r1Value";
+            r1Value.ReadOnly = true;
+            r1Value.Size = new Size(50, 27);
+            r1Value.TabIndex = 21;
+            r1Value.Text = "0x0";
+            // 
+            // generalRegistersTableColumn3Label
+            // 
+            generalRegistersTableColumn3Label.AutoSize = true;
+            generalRegistersTableColumn3Label.Location = new Point(171, 0);
+            generalRegistersTableColumn3Label.Name = "generalRegistersTableColumn3Label";
+            generalRegistersTableColumn3Label.Size = new Size(45, 20);
+            generalRegistersTableColumn3Label.TabIndex = 5;
+            generalRegistersTableColumn3Label.Text = "Value";
+            // 
+            // generalRegistersTableColumn1Label
+            // 
+            generalRegistersTableColumn1Label.AutoSize = true;
+            generalRegistersTableColumn1Label.Location = new Point(59, 0);
+            generalRegistersTableColumn1Label.Name = "generalRegistersTableColumn1Label";
+            generalRegistersTableColumn1Label.Size = new Size(45, 20);
+            generalRegistersTableColumn1Label.TabIndex = 4;
+            generalRegistersTableColumn1Label.Text = "Value";
+            // 
+            // generalRegistersTableColumn0Label
+            // 
+            generalRegistersTableColumn0Label.AutoSize = true;
+            generalRegistersTableColumn0Label.Location = new Point(3, 0);
+            generalRegistersTableColumn0Label.Name = "generalRegistersTableColumn0Label";
+            generalRegistersTableColumn0Label.Size = new Size(49, 20);
+            generalRegistersTableColumn0Label.TabIndex = 2;
+            generalRegistersTableColumn0Label.Text = "Name";
             // 
             // r1Label
             // 
@@ -217,14 +366,14 @@
             r1Label.TabIndex = 1;
             r1Label.Text = "R1";
             // 
-            // registersTableColumn2Label
+            // generalRegistersTableColumn2Label
             // 
-            registersTableColumn2Label.AutoSize = true;
-            registersTableColumn2Label.Location = new Point(115, 0);
-            registersTableColumn2Label.Name = "registersTableColumn2Label";
-            registersTableColumn2Label.Size = new Size(49, 20);
-            registersTableColumn2Label.TabIndex = 3;
-            registersTableColumn2Label.Text = "Name";
+            generalRegistersTableColumn2Label.AutoSize = true;
+            generalRegistersTableColumn2Label.Location = new Point(115, 0);
+            generalRegistersTableColumn2Label.Name = "generalRegistersTableColumn2Label";
+            generalRegistersTableColumn2Label.Size = new Size(49, 20);
+            generalRegistersTableColumn2Label.TabIndex = 3;
+            generalRegistersTableColumn2Label.Text = "Name";
             // 
             // r0Label
             // 
@@ -370,156 +519,156 @@
             r0Value.TabIndex = 20;
             r0Value.Text = "0x0";
             // 
-            // r1Value
+            // controlAndStatusregistersGroup
             // 
-            r1Value.Location = new Point(171, 36);
-            r1Value.Name = "r1Value";
-            r1Value.ReadOnly = true;
-            r1Value.Size = new Size(50, 27);
-            r1Value.TabIndex = 21;
-            r1Value.Text = "0x0";
+            controlAndStatusregistersGroup.Controls.Add(tableLayoutPanel1);
+            controlAndStatusregistersGroup.Location = new Point(335, 44);
+            controlAndStatusregistersGroup.Name = "controlAndStatusregistersGroup";
+            controlAndStatusregistersGroup.Size = new Size(232, 326);
+            controlAndStatusregistersGroup.TabIndex = 2;
+            controlAndStatusregistersGroup.TabStop = false;
+            controlAndStatusregistersGroup.Text = "Constorl and Status";
             // 
-            // r2Value
+            // tableLayoutPanel1
             // 
-            r2Value.Location = new Point(59, 69);
-            r2Value.Name = "r2Value";
-            r2Value.ReadOnly = true;
-            r2Value.Size = new Size(50, 27);
-            r2Value.TabIndex = 22;
-            r2Value.Text = "0x0";
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(spValue, 1, 4);
+            tableLayoutPanel1.Controls.Add(flagValue, 1, 3);
+            tableLayoutPanel1.Controls.Add(irValue, 1, 2);
+            tableLayoutPanel1.Controls.Add(controlAndStatusRegistersTableColumn1Label, 1, 0);
+            tableLayoutPanel1.Controls.Add(controlAndStatusRegistersTableColumn0Label, 0, 0);
+            tableLayoutPanel1.Controls.Add(pcLabel, 0, 1);
+            tableLayoutPanel1.Controls.Add(irLabel, 0, 2);
+            tableLayoutPanel1.Controls.Add(flagLabel, 0, 3);
+            tableLayoutPanel1.Controls.Add(spLabel, 0, 4);
+            tableLayoutPanel1.Controls.Add(pcValue, 1, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(3, 23);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 5;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(226, 300);
+            tableLayoutPanel1.TabIndex = 2;
             // 
-            // r3Value
+            // spValue
             // 
-            r3Value.Location = new Point(171, 69);
-            r3Value.Name = "r3Value";
-            r3Value.ReadOnly = true;
-            r3Value.Size = new Size(50, 27);
-            r3Value.TabIndex = 23;
-            r3Value.Text = "0x0";
+            spValue.Location = new Point(116, 243);
+            spValue.Name = "spValue";
+            spValue.ReadOnly = true;
+            spValue.Size = new Size(50, 27);
+            spValue.TabIndex = 26;
+            spValue.Text = "0x0";
             // 
-            // r4Value
+            // flagValue
             // 
-            r4Value.Location = new Point(59, 102);
-            r4Value.Name = "r4Value";
-            r4Value.ReadOnly = true;
-            r4Value.Size = new Size(50, 27);
-            r4Value.TabIndex = 24;
-            r4Value.Text = "0x0";
+            flagValue.Location = new Point(116, 183);
+            flagValue.Name = "flagValue";
+            flagValue.ReadOnly = true;
+            flagValue.Size = new Size(50, 27);
+            flagValue.TabIndex = 24;
+            flagValue.Text = "0x0";
             // 
-            // r5Value
+            // irValue
             // 
-            r5Value.Location = new Point(171, 102);
-            r5Value.Name = "r5Value";
-            r5Value.ReadOnly = true;
-            r5Value.Size = new Size(50, 27);
-            r5Value.TabIndex = 25;
-            r5Value.Text = "0x0";
+            irValue.Location = new Point(116, 123);
+            irValue.Name = "irValue";
+            irValue.ReadOnly = true;
+            irValue.Size = new Size(50, 27);
+            irValue.TabIndex = 22;
+            irValue.Text = "0x0";
             // 
-            // r6Value
+            // controlAndStatusRegistersTableColumn1Label
             // 
-            r6Value.Location = new Point(59, 135);
-            r6Value.Name = "r6Value";
-            r6Value.ReadOnly = true;
-            r6Value.Size = new Size(50, 27);
-            r6Value.TabIndex = 26;
-            r6Value.Text = "0x0";
+            controlAndStatusRegistersTableColumn1Label.AutoSize = true;
+            controlAndStatusRegistersTableColumn1Label.Location = new Point(116, 0);
+            controlAndStatusRegistersTableColumn1Label.Name = "controlAndStatusRegistersTableColumn1Label";
+            controlAndStatusRegistersTableColumn1Label.Size = new Size(45, 20);
+            controlAndStatusRegistersTableColumn1Label.TabIndex = 4;
+            controlAndStatusRegistersTableColumn1Label.Text = "Value";
             // 
-            // r7Value
+            // controlAndStatusRegistersTableColumn0Label
             // 
-            r7Value.Location = new Point(171, 135);
-            r7Value.Name = "r7Value";
-            r7Value.ReadOnly = true;
-            r7Value.Size = new Size(50, 27);
-            r7Value.TabIndex = 27;
-            r7Value.Text = "0x0";
+            controlAndStatusRegistersTableColumn0Label.AutoSize = true;
+            controlAndStatusRegistersTableColumn0Label.Location = new Point(3, 0);
+            controlAndStatusRegistersTableColumn0Label.Name = "controlAndStatusRegistersTableColumn0Label";
+            controlAndStatusRegistersTableColumn0Label.Size = new Size(49, 20);
+            controlAndStatusRegistersTableColumn0Label.TabIndex = 2;
+            controlAndStatusRegistersTableColumn0Label.Text = "Name";
             // 
-            // r8Value
+            // pcLabel
             // 
-            r8Value.Location = new Point(59, 168);
-            r8Value.Name = "r8Value";
-            r8Value.ReadOnly = true;
-            r8Value.Size = new Size(50, 27);
-            r8Value.TabIndex = 28;
-            r8Value.Text = "0x0";
+            pcLabel.AutoSize = true;
+            pcLabel.Location = new Point(3, 60);
+            pcLabel.Name = "pcLabel";
+            pcLabel.Size = new Size(26, 20);
+            pcLabel.TabIndex = 0;
+            pcLabel.Text = "PC";
             // 
-            // r9Value
+            // irLabel
             // 
-            r9Value.Location = new Point(171, 168);
-            r9Value.Name = "r9Value";
-            r9Value.ReadOnly = true;
-            r9Value.Size = new Size(50, 27);
-            r9Value.TabIndex = 29;
-            r9Value.Text = "0x0";
+            irLabel.AutoSize = true;
+            irLabel.Location = new Point(3, 120);
+            irLabel.Name = "irLabel";
+            irLabel.Size = new Size(22, 20);
+            irLabel.TabIndex = 6;
+            irLabel.Text = "IR";
             // 
-            // r10Value
+            // flagLabel
             // 
-            r10Value.Location = new Point(59, 201);
-            r10Value.Name = "r10Value";
-            r10Value.ReadOnly = true;
-            r10Value.Size = new Size(50, 27);
-            r10Value.TabIndex = 30;
-            r10Value.Text = "0x0";
+            flagLabel.AutoSize = true;
+            flagLabel.Location = new Point(3, 180);
+            flagLabel.Name = "flagLabel";
+            flagLabel.Size = new Size(43, 20);
+            flagLabel.TabIndex = 8;
+            flagLabel.Text = "FLAG";
             // 
-            // r11Value
+            // spLabel
             // 
-            r11Value.Location = new Point(171, 201);
-            r11Value.Name = "r11Value";
-            r11Value.ReadOnly = true;
-            r11Value.Size = new Size(50, 27);
-            r11Value.TabIndex = 31;
-            r11Value.Text = "0x0";
+            spLabel.AutoSize = true;
+            spLabel.Location = new Point(3, 240);
+            spLabel.Name = "spLabel";
+            spLabel.Size = new Size(25, 20);
+            spLabel.TabIndex = 10;
+            spLabel.Text = "SP";
             // 
-            // r12Value
+            // pcValue
             // 
-            r12Value.Location = new Point(59, 234);
-            r12Value.Name = "r12Value";
-            r12Value.ReadOnly = true;
-            r12Value.Size = new Size(50, 27);
-            r12Value.TabIndex = 32;
-            r12Value.Text = "0x0";
-            // 
-            // r13Value
-            // 
-            r13Value.Location = new Point(171, 234);
-            r13Value.Name = "r13Value";
-            r13Value.ReadOnly = true;
-            r13Value.Size = new Size(50, 27);
-            r13Value.TabIndex = 33;
-            r13Value.Text = "0x0";
-            // 
-            // r14Value
-            // 
-            r14Value.Location = new Point(59, 267);
-            r14Value.Name = "r14Value";
-            r14Value.ReadOnly = true;
-            r14Value.Size = new Size(50, 27);
-            r14Value.TabIndex = 34;
-            r14Value.Text = "0x0";
-            // 
-            // r15Value
-            // 
-            r15Value.Location = new Point(171, 267);
-            r15Value.Name = "r15Value";
-            r15Value.ReadOnly = true;
-            r15Value.Size = new Size(50, 27);
-            r15Value.TabIndex = 35;
-            r15Value.Text = "0x0";
+            pcValue.Location = new Point(116, 63);
+            pcValue.Name = "pcValue";
+            pcValue.ReadOnly = true;
+            pcValue.Size = new Size(50, 27);
+            pcValue.TabIndex = 20;
+            pcValue.Text = "0x0";
             // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 606);
-            Controls.Add(registersGroupBox);
+            Controls.Add(controlAndStatusregistersGroup);
+            Controls.Add(generalRegistersGroup);
             Controls.Add(menuStrip);
             MainMenuStrip = menuStrip;
             Name = "CPUViewerForm";
             Text = "CPUViewer";
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
-            registersGroupBox.ResumeLayout(false);
+            generalRegistersGroup.ResumeLayout(false);
             registersTableLayoutPanel.ResumeLayout(false);
             registersTableLayoutPanel.PerformLayout();
+            controlAndStatusregistersGroup.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -531,14 +680,14 @@
         private ToolStripMenuItem openToolStripMenuItem;
         private OpenFileDialog openFileDialog;
         private ToolStripMenuItem runToolStripMenuItem;
-        private GroupBox registersGroupBox;
+        private GroupBox generalRegistersGroup;
         private TableLayoutPanel registersTableLayoutPanel;
         private Label r1Label;
         private Label r0Label;
-        private Label registersTableColumn0Label;
-        private Label registersTableColumn1Label;
-        private Label registersTableColumn2Label;
-        private Label registersTableColumn3Label;
+        private Label generalRegistersTableColumn0Label;
+        private Label generalRegistersTableColumn1Label;
+        private Label generalRegistersTableColumn2Label;
+        private Label generalRegistersTableColumn3Label;
         private Label r2Label;
         private Label r13Label;
         private Label r3Label;
@@ -569,5 +718,17 @@
         private TextBox r3Value;
         private TextBox r2Value;
         private TextBox r1Value;
+        private GroupBox controlAndStatusregistersGroup;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TextBox spValue;
+        private TextBox flagValue;
+        private TextBox irValue;
+        private Label controlAndStatusRegistersTableColumn1Label;
+        private Label controlAndStatusRegistersTableColumn0Label;
+        private Label pcLabel;
+        private Label irLabel;
+        private Label flagLabel;
+        private Label spLabel;
+        private TextBox pcValue;
     }
 }
