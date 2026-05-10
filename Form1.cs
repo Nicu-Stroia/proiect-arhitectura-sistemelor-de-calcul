@@ -11,7 +11,23 @@ namespace proiect_arhitectura_sistemelor_de_calcul
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //put parse logic here
+                var parsed = ASMParser.Parse(openFileDialog.FileName);
+                if (parsed.Count != 0)
+                    MessageBox.Show(
+                        "Parsed successfully",
+                        "Parse status",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                        );
+                else
+                    MessageBox.Show(
+                        "Parsed failed",
+                        "Parse status",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                        );
+
+                parsedTextBox.Lines = parsed.ToArray();
             }
         }
 

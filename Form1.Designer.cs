@@ -121,6 +121,8 @@
             inputSLabel = new Label();
             inputDLabel = new Label();
             inputSValue = new TextBox();
+            parsedTextBox = new TextBox();
+            parsedTextLabel = new Label();
             menuStrip.SuspendLayout();
             generalRegistersGroup.SuspendLayout();
             generalRegistersTableLayout.SuspendLayout();
@@ -1099,11 +1101,31 @@
             inputSValue.TabIndex = 20;
             inputSValue.Text = "0x0";
             // 
+            // parsedTextBox
+            // 
+            parsedTextBox.Location = new Point(329, 422);
+            parsedTextBox.Multiline = true;
+            parsedTextBox.Name = "parsedTextBox";
+            parsedTextBox.ScrollBars = ScrollBars.Vertical;
+            parsedTextBox.Size = new Size(150, 150);
+            parsedTextBox.TabIndex = 7;
+            // 
+            // parsedTextLabel
+            // 
+            parsedTextLabel.AutoSize = true;
+            parsedTextLabel.Location = new Point(329, 399);
+            parsedTextLabel.Name = "parsedTextLabel";
+            parsedTextLabel.Size = new Size(55, 20);
+            parsedTextLabel.TabIndex = 8;
+            parsedTextLabel.Text = "Parsed:";
+            // 
             // CPUViewerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1241, 606);
+            Controls.Add(parsedTextLabel);
+            Controls.Add(parsedTextBox);
             Controls.Add(aluGroup);
             Controls.Add(busGroup);
             Controls.Add(auxiliaryRegistersGroup);
@@ -1137,6 +1159,12 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+        #endregion
+
+        #region Custom Classes
+
+
 
         #endregion
 
@@ -1233,5 +1261,7 @@
         private TextBox inputSValue;
         private Label outputRLabel;
         private TextBox outputRValue;
+        private TextBox parsedTextBox;
+        private Label parsedTextLabel;
     }
 }
