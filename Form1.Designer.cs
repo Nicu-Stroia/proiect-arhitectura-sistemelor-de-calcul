@@ -675,7 +675,7 @@
             memoryInterfaceRegistersGroup.Controls.Add(tableLayoutPanel2);
             memoryInterfaceRegistersGroup.Location = new Point(532, 44);
             memoryInterfaceRegistersGroup.Name = "memoryInterfaceRegistersGroup";
-            memoryInterfaceRegistersGroup.Size = new Size(232, 326);
+            memoryInterfaceRegistersGroup.Size = new Size(232, 175);
             memoryInterfaceRegistersGroup.TabIndex = 3;
             memoryInterfaceRegistersGroup.TabStop = false;
             memoryInterfaceRegistersGroup.Text = "Memory Interface";
@@ -700,12 +700,12 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(226, 300);
+            tableLayoutPanel2.Size = new Size(226, 149);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // mdrValue
             // 
-            mdrValue.Location = new Point(116, 203);
+            mdrValue.Location = new Point(116, 101);
             mdrValue.Name = "mdrValue";
             mdrValue.ReadOnly = true;
             mdrValue.Size = new Size(50, 27);
@@ -733,7 +733,7 @@
             // adrLabel
             // 
             adrLabel.AutoSize = true;
-            adrLabel.Location = new Point(3, 100);
+            adrLabel.Location = new Point(3, 49);
             adrLabel.Name = "adrLabel";
             adrLabel.Size = new Size(39, 20);
             adrLabel.TabIndex = 0;
@@ -742,7 +742,7 @@
             // mdrLabel
             // 
             mdrLabel.AutoSize = true;
-            mdrLabel.Location = new Point(3, 200);
+            mdrLabel.Location = new Point(3, 98);
             mdrLabel.Name = "mdrLabel";
             mdrLabel.Size = new Size(42, 20);
             mdrLabel.TabIndex = 6;
@@ -750,7 +750,7 @@
             // 
             // adrValue
             // 
-            adrValue.Location = new Point(116, 103);
+            adrValue.Location = new Point(116, 52);
             adrValue.Name = "adrValue";
             adrValue.ReadOnly = true;
             adrValue.Size = new Size(50, 27);
@@ -760,9 +760,9 @@
             // auxiliaryRegistersGroupBox
             // 
             auxiliaryRegistersGroupBox.Controls.Add(tableLayoutPanel3);
-            auxiliaryRegistersGroupBox.Location = new Point(803, 44);
+            auxiliaryRegistersGroupBox.Location = new Point(532, 225);
             auxiliaryRegistersGroupBox.Name = "auxiliaryRegistersGroupBox";
-            auxiliaryRegistersGroupBox.Size = new Size(232, 326);
+            auxiliaryRegistersGroupBox.Size = new Size(232, 145);
             auxiliaryRegistersGroupBox.TabIndex = 4;
             auxiliaryRegistersGroupBox.TabStop = false;
             auxiliaryRegistersGroupBox.Text = "Auxiliary";
@@ -787,12 +787,12 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(226, 300);
+            tableLayoutPanel3.Size = new Size(226, 119);
             tableLayoutPanel3.TabIndex = 2;
             // 
             // ivrValue
             // 
-            ivrValue.Location = new Point(116, 203);
+            ivrValue.Location = new Point(116, 81);
             ivrValue.Name = "ivrValue";
             ivrValue.ReadOnly = true;
             ivrValue.Size = new Size(50, 27);
@@ -820,7 +820,7 @@
             // tLabel
             // 
             tLabel.AutoSize = true;
-            tLabel.Location = new Point(3, 100);
+            tLabel.Location = new Point(3, 39);
             tLabel.Name = "tLabel";
             tLabel.Size = new Size(17, 20);
             tLabel.TabIndex = 0;
@@ -829,15 +829,15 @@
             // ivrLabel
             // 
             ivrLabel.AutoSize = true;
-            ivrLabel.Location = new Point(3, 200);
+            ivrLabel.Location = new Point(3, 78);
             ivrLabel.Name = "ivrLabel";
-            ivrLabel.Size = new Size(42, 20);
+            ivrLabel.Size = new Size(31, 20);
             ivrLabel.TabIndex = 6;
-            ivrLabel.Text = "MDR";
+            ivrLabel.Text = "IVR";
             // 
             // tValue
             // 
-            tValue.Location = new Point(116, 103);
+            tValue.Location = new Point(116, 42);
             tValue.Name = "tValue";
             tValue.ReadOnly = true;
             tValue.Size = new Size(50, 27);
