@@ -18,5 +18,5 @@ public class DecodeInstruction
             MAD = (ir >> 4) & 0x3,
             RD = ir & 0xF,
         };
-    }a
+    }
 }
